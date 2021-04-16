@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+/* font-family: 'Overpass', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+
+:root {
+  --light-red: hsl(356, 100%, 66%);
+  --very-light-red: hsl(355, 100%, 74%);
+  --very-dark-blue: hsl(208, 49%, 24%);
+  --white: hsl(0, 0%, 100%);
+  --grayish-blue: hsl(240, 2%, 79%);
+  --very-dark-grayish-blue: hsl(207, 13%, 34%);
+  --very-dark-black-blue: hsl(240, 10%, 16%);
+  --very-light-red: hsl(13, 100%, 72%);
+  --light-red: hsl(353, 100%, 62%);
+  --very-dark-gray-blue: hsl(237, 17%, 21%);
+  --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  min-height: 200vh;
+  overflow: hidden;  
+}
+
+.header {
+    height: 70vh;
+    background-image: url(../images/bg-pattern-intro.svg);
+    background-repeat: no-repeat;
+    background-color: var(--light-red);
+    background-size: 300%;
+    background-position: bottom 70% left 38%;
+    border-bottom-left-radius: 100px;
+}
+
+.header__logo {
+  position: relative;
+  left: 5%;
+  top: 10%;
+}
+
+.header__main-tittle {
+    font-family: 'Overpass', sans-serif;
+    text-align: center;
+    color:  var(--white);
+    margin: 150px 20px; 
+}
+
+.main-title__heading {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 10px;
+    line-height: 2.4rem;
+}
+
+.main-title__paragraph {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 6vw 40px 6vw;
+}
+
+.header__btn {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.header__btn a {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    min-width: 140px;
+    height: 40px;
+    border-radius: 25px;
+    padding: 0.6rem 0.8rem;
+    margin: 5px 5px;
+}
+
+.main-title__start {
+    background-color: var(--white);
+    color: var(--light-red);
+    
+}
+
+.main-title__learn {
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+
+/* MENU-HAMBURGER */ 
+.menu-btn {
+  position: fixed;
+  right: 5%;
+  top: 8.5%;
+  width: 2.5rem;
+  height: auto;
+  background-color: transparent;
+}
+
+.menu-btn__hamburger {
+  width: 100%;
+}
+
+.menu-btn:hover {
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: none;  
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: var(--white);
+  box-shadow: 1px 2px 10px var(--grayish-blue);
+  border-radius: 0.5rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+}
+
+.mobile-nav__item {
+  margin: 1.2rem 0;
+}
+
+.mobile-nav__item:last-child::after {
+  display: block;
+  content: "";
+  width: 80%;
+  height: 1px;
+  border: 1px solid hsla(240, 1%, 86%, 0.61);
+  background-color: hsla(240, 1%, 86%, 0.61);
+  margin: 20px auto 0 auto;
+}
+
+.mobile-nav__item > a {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.mobile-nav__item img {
+  display: inline-block;
+  width: 0.8rem;
+  vertical-align: middle;
+}
+
+.mobile-nav__sub-items {
+  display: none;
+  margin: 20px 0;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  background-color: hsla(240, 1%, 86%, 0.61);
+}
+
+.mobile-nav__sub-items li {
+    padding: 15px 0;
+    font-weight: 300;
+}
+
+.menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-wrapper a {
+  display: block;
+  font-size: 1.2rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.menu-wrapper__login {
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.menu-wrapper__signUp {
+  width: 160px;
+  padding: 0.8rem 0;
+  background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  border-radius: 50px;
+  color: white;
+  font-weight: 500;
+  margin: 25px 0;
+}

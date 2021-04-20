@@ -35,17 +35,17 @@ ul {
 
 .wrapper {
   min-height: 200vh;
-  overflow: hidden;  
+  overflow: hidden;
 }
 
 .header {
-    height: 70vh;
-    background-image: url(../images/bg-pattern-intro.svg);
-    background-repeat: no-repeat;
-    background-color: var(--light-red);
-    background-size: 300%;
-    background-position: bottom 70% left 38%;
-    border-bottom-left-radius: 100px;
+  height: 70vh;
+  background-image: url(../images/bg-pattern-intro.svg);
+  background-repeat: no-repeat;
+  background-color: var(--light-red);
+  background-size: 300%;
+  background-position: bottom 70% left 38%;
+  border-bottom-left-radius: 100px;
 }
 
 .header__logo {
@@ -55,23 +55,23 @@ ul {
 }
 
 .header__main-tittle {
-    font-family: 'Overpass', sans-serif;
-    text-align: center;
-    color:  var(--white);
-    margin: 150px 20px; 
+  font-family: "Overpass", sans-serif;
+  text-align: center;
+  color: var(--white);
+  margin: 150px 20px;
 }
 
 .main-title__heading {
-    font-size: 30px;
-    font-weight: 700;
-    margin: 20px 10px;
-    line-height: 2.4rem;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 20px 10px;
+  line-height: 2.4rem;
 }
 
 .main-title__paragraph {
-    font-size: 15px;
-    font-weight: 300;
-    margin: 0 6vw 40px 6vw;
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0 6vw 40px 6vw;
 }
 
 .header__btn {
@@ -81,29 +81,27 @@ ul {
 }
 
 .header__btn a {
-    font-family: 'Overpass', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    min-width: 140px;
-    height: 40px;
-    border-radius: 25px;
-    padding: 0.6rem 0.8rem;
-    margin: 5px 5px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  min-width: 140px;
+  height: 40px;
+  border-radius: 25px;
+  padding: 0.6rem 0.8rem;
+  margin: 5px 5px;
 }
 
 .main-title__start {
-    background-color: var(--white);
-    color: var(--light-red);
-    
+  background-color: var(--white);
+  color: var(--light-red);
 }
 
 .main-title__learn {
-    color: var(--white);
-    border: 1px solid var(--white);
+  color: var(--white);
+  border: 1px solid var(--white);
 }
 
-
-/* MENU-HAMBURGER */ 
+/* MENU-HAMBURGER */
 .menu-btn {
   position: fixed;
   right: 5%;
@@ -111,6 +109,7 @@ ul {
   width: 2.5rem;
   height: auto;
   background-color: transparent;
+  z-index: 999;
 }
 
 .menu-btn__hamburger {
@@ -122,8 +121,9 @@ ul {
 }
 
 .mobile-nav {
-  display: none;  
+  display: none;
   position: fixed;
+  opacity: 0;
   top: 15%;
   left: 50%;
   transform: translateX(-50%);
@@ -135,6 +135,7 @@ ul {
   border-radius: 0.5rem;
   font-family: "Overpass", sans-serif;
   font-weight: 600;
+  transition: opacity 1s 1s;
 }
 
 .mobile-nav__item {
@@ -172,9 +173,15 @@ ul {
   background-color: hsla(240, 1%, 86%, 0.61);
 }
 
+.menu-active {
+  display: block !important;
+  opacity: 1;
+  
+}
+
 .mobile-nav__sub-items li {
-    padding: 15px 0;
-    font-weight: 300;
+  padding: 15px 0;
+  font-weight: 300;
 }
 
 .menu-wrapper {
@@ -200,7 +207,7 @@ ul {
   padding: 0.8rem 0;
   background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
   border-radius: 50px;
-  color: white;
+  color: var(--white);
   font-weight: 500;
   margin: 25px 0;
 }

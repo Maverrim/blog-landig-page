@@ -43,7 +43,7 @@ ul {
   background-image: url(../images/bg-pattern-intro.svg);
   background-repeat: no-repeat;
   background-color: var(--light-red);
-  background-size: 300%;
+  background-size: 400%;
   background-position: bottom 70% left 38%;
   border-bottom-left-radius: 100px;
 }
@@ -58,7 +58,7 @@ ul {
   font-family: "Overpass", sans-serif;
   text-align: center;
   color: var(--white);
-  margin: 150px 20px;
+  margin: 120px 20px;
 }
 
 .main-title__heading {
@@ -101,6 +101,87 @@ ul {
   border: 1px solid var(--white);
 }
 
+/* DESIGN FEATURE */
+.feature {
+  margin: 2rem 1rem;
+}
+
+.feature__img-wrapper > [class*="-desktop"] {
+  display: none;
+}
+
+.feature__img-wrapper img {
+  width: 100%;
+}
+
+.feature__heading {
+  margin: 70px auto 40px auto;
+  font-family: "Overpass", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.6rem;
+  letter-spacing: 0.05rem;
+  text-align: center;
+}
+
+.feature__paragraph {
+  color: var(--grayish-blue);
+  font-size: 14px;
+  width: 80vw;
+  margin: 0 auto 40px auto;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+/* infrastructure feature */
+.state-of-art {
+}
+
+.state-of-art__phones-wrapper {
+  text-align: center;
+}
+
+.state-of-art__phones-wrapper .phones {
+  width: 320px;
+  margin-top: 1rem;
+  z-index: 2;
+}
+
+.state-of-art__content {
+  display: block;
+  background-color: var(--very-dark-black-blue);
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  height: 540px;
+  background-image: url(../images/bg-pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-position: top -230px right 30px;
+  position: relative;
+  top: -200px;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature__heading.infrastructure {
+  color: var(--white);
+  padding-top: 4.2rem;
+  font-size: 2.3rem;
+  line-height: 2.8rem;
+}
+
+.state-of-art__content .feature__paragraph {
+  font-family: "Overpass", sans-serif;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  width: 80vw;
+  line-height: 1.5rem;
+}
+
 /* MENU-HAMBURGER */
 .menu-btn {
   position: fixed;
@@ -123,7 +204,6 @@ ul {
 .mobile-nav {
   display: none;
   position: fixed;
-  opacity: 0;
   top: 15%;
   left: 50%;
   transform: translateX(-50%);
@@ -135,7 +215,6 @@ ul {
   border-radius: 0.5rem;
   font-family: "Overpass", sans-serif;
   font-weight: 600;
-  transition: opacity 1s 1s;
 }
 
 .mobile-nav__item {
@@ -175,8 +254,6 @@ ul {
 
 .menu-active {
   display: block !important;
-  opacity: 1;
-  
 }
 
 .mobile-nav__sub-items li {

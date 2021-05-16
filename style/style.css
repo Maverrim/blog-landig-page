@@ -48,7 +48,16 @@ ul {
   border-bottom-left-radius: 100px;
 }
 
+
+
 .header__logo {
+  position: relative;
+  left: 5%;
+  top: 10%;
+}
+
+.logo-nav-wrapper {
+  display: inline-block;
   position: relative;
   left: 5%;
   top: 10%;
@@ -144,9 +153,6 @@ ul {
 }
 
 /* infrastructure feature */
-.state-of-art {
- 
-}
 
 .state-of-art__phones-wrapper {
   text-align: center;
@@ -215,7 +221,7 @@ ul {
 }
 
 .footer a {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .footer__logo {
@@ -225,9 +231,8 @@ ul {
 
 .footer__main-title {
   color: var(--white);
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.2rem;
-  
 }
 
 .footer__lists {
@@ -242,7 +247,6 @@ ul {
 .main-list__element {
   margin: 2rem;
 }
-
 
 /* MENU-HAMBURGER */
 .menu-btn {
@@ -279,7 +283,7 @@ ul {
   font-weight: 600;
   overflow-y: auto;
   z-index: 999;
-  height: 55vh;
+  height: 60%;
 }
 
 .mobile-nav__item {
@@ -353,4 +357,194 @@ ul {
   color: var(--white);
   font-weight: 500;
   margin: 25px 0;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+@media (max-width: 680px) and (orientation: landscape) {
+  .header {
+    height: 100vh;
+  }
+
+  .header__main-tittle {
+    margin: 60px 20px;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  /* DEKSTOP NAVIGATION */
+
+  .menu-btn {
+    display: none;
+  }
+
+  .logo-nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    left: 0;
+  }
+
+  .desktop-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 80px;
+    font-family: "Overpass", sans-serif;
+  }
+
+  .header__logo {
+    align-self: center;
+  }
+
+  .desktop-nav a {
+    color: var(--white);
+  }
+
+  .desktop-nav__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+
+  .desktop-nav__item {
+    margin-left: 1.2rem;
+  }
+
+  .desktop-nav__sub-items {
+    display: none;
+  }
+
+  .menu-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    width: 200px;
+  }
+
+  .menu-wrapper a {
+    font-size: 1rem;
+  }
+
+  .menu-wrapper__signUp {
+    width: 120px;
+    padding: 0.4rem 0.2rem;
+  }
+
+  /* HEADER DESKTOP */
+  .header__logo {
+  }
+
+  .header {
+    background-position: bottom 36% left 70%;
+    height: 50%;
+    padding-bottom: 50px;
+  }
+
+  .header__main-tittle {
+    margin: 0;
+  }
+
+  /* DESIGN */
+
+  .feature__img-wrapper > [class*="-mobile"] {
+    display: none;
+  }
+
+  .feature__img-wrapper > [class*="-desktop"] {
+    display: block;
+  }
+
+  .feature__grid {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: auto;
+    text-align: left;
+  }
+
+  .intro {
+    margin-top: 5%;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .feature__heading.heading--desktop {
+    text-align: center;
+    margin-left: 0;
+    font-size: 26px;
+  }
+
+  .feature__heading {
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 10%;
+    color: var(--very-dark-blue);
+  }
+
+  .feature__paragraph {
+    text-align: left;
+    width: 80%;
+    margin-left: 10%;
+    color: var(--very-dark-black-blue);
+    font-family: "Overpass", sans-serif;
+  }
+
+  .feature__img-wrapper {
+    position: relative;
+    width: 620px;
+    left: 0;
+    bottom: 10%;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+
+  .state-of-art__phones-wrapper {
+    position: absolute;
+    right: 50%;
+    bottom: -40px;
+  }
+
+  .state-of-art__phones-wrapper .phones {
+    width: 400px;
+    margin-top: 0;
+    z-index: 0;
+  }
+
+  .state-of-art {
+    position: relative;
+    top: 20px;
+  }
+
+  .state-of-art__content {
+    display: block;
+    width: 100%;
+    text-align: right;
+    top: 0;
+    height: 35%;
+  }
+
+  .content-wrapper {
+    width: 40%;
+    position: relative;
+    left: 50%;
+    bottom: 30px;
+    align-self: end;
+    justify-self: end;
+  }
+
+  .state-of-art__content .feature__paragraph {
+    width: 100%;
+  }
+
+  .editor {
+    display: none;
+  }
+
+  .feature.free {
+    margin-top: 30%;
+  }
 }

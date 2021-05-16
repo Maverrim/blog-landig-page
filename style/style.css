@@ -48,8 +48,6 @@ ul {
   border-bottom-left-radius: 100px;
 }
 
-
-
 .header__logo {
   position: relative;
   left: 5%;
@@ -546,5 +544,30 @@ ul {
 
   .feature.free {
     margin-top: 30%;
+  }
+
+  .feature.free {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: auto;
+  }
+
+  .feature__img-wrapper.free {
+    bottom: 0;
+  }
+
+  .footer {
+  background-color: var(--very-dark-black-blue);
+  border-top-right-radius: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+  .footer__list {
+    display: flex;
+    justify-content: space-evenly;
   }
 }

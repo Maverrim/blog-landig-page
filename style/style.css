@@ -211,6 +211,7 @@ ul {
 /* FOOTER */
 
 .footer {
+  position: relative;
   background-color: var(--very-dark-black-blue);
   border-top-right-radius: 100px;
   text-align: center;
@@ -240,6 +241,20 @@ ul {
 .footer__lists a {
   color: var(--grayish-blue);
   line-height: 1.8;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  font-size: 10px;
+  margin-bottom: 5px;
+  z-index: 999;
+}
+
+.attribution a {
+  color: var(--white);
 }
 
 .main-list__element {
@@ -570,4 +585,8 @@ ul {
     display: flex;
     justify-content: space-evenly;
   }
+}
+
+@media  screen and (min-width: 1024px) {
+  
 }
